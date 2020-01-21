@@ -62,9 +62,9 @@ test_path = 'e:/Dacon/test'
 label = pd.read_csv('e:/Dacon/train_label.csv')
 
 # train (event T = 10)
-train = data_loader_all(data_loader, path = train_path, train = True, nrows = 100, normal = 999, event_time = 10, lookup_table = label)
+train = data_loader_all(data_loader, path = train_path, train = True, nrows = 15, normal = 999, event_time = 10, lookup_table = label)
 
-file = open('e:/Dacon/train_10.txt','wb')      
+file = open('e:/Dacon/train_15R_10.txt','wb')      
 pickle.dump(train,file) 
 file.close() 
 
