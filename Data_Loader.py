@@ -75,7 +75,6 @@ file = open('e:/Dacon/test.txt','wb')
 pickle.dump(test,file)
 file.close()
 
-train.head(100)
 
 
 ##### LOAD #####
@@ -86,3 +85,8 @@ file.close()
 file = open('e:/Dacon/test.txt','rb')
 test = pickle.load(file)
 file.close()
+
+file = open('e:/Dacon/train_16R_10ET.txt','rb')
+train = pickle.load(file)
+file.close()
+
