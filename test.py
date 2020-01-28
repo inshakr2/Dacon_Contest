@@ -121,18 +121,30 @@ for j in train.id.unique():
             idx_whole_3.append(i)
     print(j)        
 
-len(train.id)
-
-
-collections.Counter(idx_whole_3).values()
-x = dict(collections.Counter(idx_whole_3))
-
 file = open('e:/Dacon/idx_whole_3.txt','wb')
 pickle.dump(idx_whole_3,file)
 file.close()
+
+file = open('e:/Dacon/idx_whole_3.txt','rb')
+idx_whole_3 = pickle.load(file)
+file.close()
+
+
+import collections
+import operator
+import matplotlib.pylab as plt
+collections.Counter(idx_whole_3).values()
+dict(collections.Counter(idx_whole_3))
+
 
 y = list()
 for i,j in x.items():
     if j < 828 :
         y.append(i)
 len(y)
+
+x = dict(collections.Counter(idx_whole_3))
+plt.figure(figsize=(12,6))
+plt.bar(x=x.keys(), height = x.values())
+
+train
